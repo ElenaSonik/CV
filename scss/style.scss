@@ -1,0 +1,186 @@
+$primary-text-color:#2f2f2f;
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: $primary-text-color;
+}
+
+html{
+    background-color: #ccc;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px 40px 0 40px;
+    @media (max-width: 1280px){
+        padding: 30px 30px 0 30px;
+    }
+    @media (max-width: 403px){
+        padding: 20px 10px 0 10px;
+    }
+}
+
+.heading_cv{
+    font-weight: 300;
+    padding-bottom: 15px;
+    font-size: 36px;
+}
+
+.navbar{
+    padding-top: 20px;
+    height: 20px;
+    border-bottom: 2px dashed #2f2f2f;
+    text-align: right;
+    &_link{
+        display: inline-block;
+        font-size: 18px;
+        line-height: 20px;
+        height: 22px;
+        box-sizing: border-box;
+        padding: 0 15px;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        @media (max-width: 525px){
+            width: 50%;
+            align-content: center;
+            text-align: start;
+            padding: 0;
+            height: 30px;
+            line-height: 30px;
+        }
+        &:last-of-type, &:first-of-type{
+            padding: 0;
+        }
+        &:hover{
+            border-bottom: 2px solid black;
+            text-shadow: 0 0 0.5px black;
+            @media (max-width: 525px){
+                border-bottom: none;
+            }
+        }
+    }
+    @media (max-width: 525px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 0;
+        padding-top: 5px;
+    }
+}
+
+.container_about{
+    display: inline-flex;
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
+    &_heading{
+        font-size: 72px;
+        line-height: 72px;
+        height: 65px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: 5px 6px 1px #d1d1d1dc;
+        @media (max-width: 992px){
+            font-size: 54px;
+        }
+        @media (max-width: 525px){
+            padding-top: 20px;
+            font-size: 48px;
+        }
+        @media (max-width: 403px){
+            font-size: 36px;
+        }
+    }
+    &_image{
+        margin: 30px 30px 30px 0;
+        display: flex;
+        @media (max-width: 515px){
+            margin: 20px 0 30px 0;
+        }
+    }
+}
+
+.block_image{
+    width: 300px;
+    height: 325px;
+}
+
+.header_line{
+    position: relative;
+    z-index: 1;
+    border-bottom: 5px solid $primary-text-color;
+}
+
+.block_text{
+    width: 75%;
+    margin: 30px 0;
+    @media (max-width: 768px){
+        margin-top: -10px;
+    }
+    &_heading{
+        background-color: $primary-text-color;
+        color: #fff;
+        padding: 5px 5px 5px 10px;
+        font-size: 18px;
+        width: 195px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    &_heading::after{
+        content: "";
+        height: 0;
+        width: 0;
+        display: block;
+        position: absolute;
+        border-top: 34.5px solid $primary-text-color;
+        border-bottom:none;
+        border-left:none;
+        border-right:28px solid transparent;
+        right: -28px;
+        top: 0px;
+    }
+    &_paragraph{
+        margin-top: 20px;
+    }
+    &_blockquote{
+        margin-top: 20px;
+        background-color: #d3d3d3;
+        font-style: italic;
+        padding: 20px;
+        font-size: 14px;
+        box-sizing: border-box;
+        @media (max-width: 331px){
+            padding: 20px 10px;
+        }
+    }
+}
+.blockquote_source{
+    display: block;
+    font-style: normal;
+    padding-top: 10px;
+    text-align: end;
+    &_prof{
+        font-weight: 600;
+    }
+}
+
