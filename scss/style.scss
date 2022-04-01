@@ -18,6 +18,7 @@ $primary-text-color:#2f2f2f;
 
 * {
     margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
     color: $primary-text-color;
 }
@@ -114,6 +115,9 @@ html{
     &_image{
         margin: 30px 30px 30px 0;
         display: flex;
+        @media (max-width: 768px){
+            justify-content: center;
+        }
         @media (max-width: 515px){
             margin: 20px 0 30px 0;
         }
@@ -136,15 +140,17 @@ html{
     margin: 30px 0;
     @media (max-width: 768px){
         margin-top: -10px;
+        width: 100%;
     }
     &_heading{
         background-color: $primary-text-color;
         color: #fff;
         padding: 5px 5px 5px 10px;
         font-size: 18px;
-        width: 195px;
+        width: 210px;
         position: relative;
         box-sizing: border-box;
+        font-weight: 600;
     }
     &_heading::after{
         content: "";
@@ -184,3 +190,165 @@ html{
     }
 }
 
+.container_skills{
+    &_line{
+        border-bottom: 2px solid $primary-text-color;
+        margin-bottom: 10px;
+    }
+}
+
+.block_list{
+    margin: 30px auto 15px auto;
+    display: flex;
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
+    &_skills{
+        width: 50%;
+        @media (max-width: 768px){
+            width: 100%;
+        }
+    }
+    &_duties{
+        width: 50%;
+        @media (max-width: 768px){
+            width: 100%;
+        }
+    }
+}
+
+.skills_heading{
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.skills_linear{
+    position: relative;
+    width: 90%;
+    font-style: italic;
+}
+
+.skill_block{
+    background-color: #d3d3d3;
+    margin-top: 10px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.skill_block1{
+    width: 80%;
+}
+
+.skill_block2{
+    width: 100%;
+}
+
+.skill_block3{
+    width: 100%;
+}
+
+.skill_block4{
+    width: 80%;
+}
+
+.skill_block5{
+    width: 60%;
+}
+
+.linear{
+    position: relative;
+    width: 90%;
+    margin: 10px 0 40px 0;
+    height: 14px;
+    border-bottom: 2px solid $primary-text-color;
+}
+
+.dash{
+    position: absolute;
+    border-left: 2px solid $primary-text-color;
+    height: 14px;
+}
+
+.dash:nth-of-type(1){
+    left: 20%;
+}
+
+.dash:nth-of-type(2){
+    left: 40%;
+}
+
+.dash:nth-of-type(3){
+    left: 60%;
+}
+
+.dash:nth-of-type(4){
+    left: 80%;
+}
+
+.dash:nth-of-type(5){
+    left: 100%;
+}
+
+.dash:after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: -7px;
+}
+
+.dash:nth-of-type(1):after{
+    content: "1";
+}
+
+.dash:nth-of-type(2):after{
+    content: "2";
+}
+
+.dash:nth-of-type(3):after{
+    content: "3";
+}
+
+.dash:nth-of-type(4):after{
+    content: "4";
+}
+
+.dash:nth-of-type(5):after{
+    content: "5";
+}
+
+.list{
+    list-style-position: outside;
+    padding-left: 20px;
+    &_duties{
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    &_duties::marker{
+        content: "\26AB";
+    }
+}
+
+.container_ps{
+    display: inline-flex;
+    margin: 15px 0 15px 0;
+    @media (max-width: 992px){
+        align-items: center;
+    }
+}
+
+.block_ps{
+    margin-top: -15px;
+    @media (max-width: 992px){
+        margin-top: 10px;
+    }
+    &_img_cat{
+        float: left;
+        margin: 0 10px 0 0;
+        width: 200px;
+        @media (max-width: 992px){
+            width: 150px;
+        }
+    }
+}
